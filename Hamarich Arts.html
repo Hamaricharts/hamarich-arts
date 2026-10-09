@@ -1,0 +1,435 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html>
+<html lang="am">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hamarich Arts</title>
+<meta name="description" content="Hamarich Arts — Charcoal portrait art from Addis Ababa. / የከሰል ፖርትሬት ስዕሎች።">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&family=Noto+Serif+Ethiopic:wght@300;400;600&family=Noto+Sans+Ethiopic:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#ede9e1; --paper-2:#e3ddd1; --ink:#161615; --ink-soft:#55524b; --line:#cbc4b6; --accent:#8a6a45; --dark:#161615; --dark-ink:#ece8df;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --paper:#121211; --paper-2:#1b1a18; --ink:#ece8df; --ink-soft:#a39e92; --line:#2f2d29; --accent:#c9a67a; --dark:#1b1a18; --dark-ink:#ece8df; }
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--paper); color:var(--ink);
+    font-family:'Inter','Noto Sans Ethiopic',sans-serif; font-weight:300; line-height:1.75;
+    -webkit-font-smoothing:antialiased; overflow-x:hidden;
+  }
+  /* paper grain */
+  body::before{
+    content:""; position:fixed; inset:0; pointer-events:none; z-index:100; opacity:.07; mix-blend-mode:multiply;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .9 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+  }
+  @media (prefers-color-scheme: dark){ body::before{mix-blend-mode:screen;opacity:.05} }
+  h1,h2,h3{font-family:'Cormorant Garamond','Noto Serif Ethiopic',serif;font-weight:500;line-height:1.12}
+  a{color:inherit}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 22px}
+
+  /* Header */
+  header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 86%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .bar{display:flex;justify-content:space-between;align-items:center;height:62px;gap:16px}
+  .logo{font-family:'Cormorant Garamond',serif;font-size:23px;letter-spacing:.05em;text-decoration:none;white-space:nowrap}
+  .logo i{color:var(--accent);font-style:normal}
+  nav ul{display:flex;gap:24px;list-style:none;font-size:13.5px}
+  nav a{text-decoration:none;color:var(--ink-soft);transition:.2s}
+  nav a:hover{color:var(--ink)}
+  .lang{display:flex;border:1px solid var(--ink);font-size:12px;letter-spacing:.08em}
+  .lang button{background:none;border:0;color:var(--ink);padding:6px 11px;cursor:pointer;font:inherit}
+  .lang button.on{background:var(--ink);color:var(--paper)}
+  @media(max-width:860px){
+    .bar{height:auto;padding:10px 0 4px;flex-wrap:wrap}
+    nav{order:3;width:100%;overflow-x:auto;padding-bottom:8px}
+    nav ul{gap:20px;white-space:nowrap}
+  }
+
+  /* Hero */
+  .hero{padding:96px 0 90px;text-align:center;position:relative}
+  .hero::after{
+    content:"";position:absolute;left:50%;top:30px;width:min(620px,90vw);height:420px;transform:translateX(-50%);
+    background:radial-gradient(ellipse at center,color-mix(in srgb,var(--ink) 11%,transparent),transparent 68%);z-index:-1;filter:blur(18px);
+  }
+  .eyebrow{font-size:11.5px;letter-spacing:.32em;text-transform:uppercase;color:var(--accent);margin-bottom:26px}
+  .hero h1{font-size:clamp(46px,11vw,106px);letter-spacing:-.015em}
+  .hero h1 em{font-style:italic;color:var(--accent)}
+  .hero p{max-width:500px;margin:28px auto 38px;color:var(--ink-soft);font-size:17px}
+  .btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .btn{display:inline-block;padding:14px 30px;border:1px solid var(--ink);text-decoration:none;font-size:13.5px;letter-spacing:.07em;transition:.25s;background:none;color:var(--ink);cursor:pointer;font-family:inherit}
+  .btn.solid{background:var(--ink);color:var(--paper)}
+  .btn.solid:hover{background:transparent;color:var(--ink)}
+  .btn.ghost:hover{background:var(--ink);color:var(--paper)}
+  .scroll{margin-top:70px;font-size:11px;letter-spacing:.3em;color:var(--ink-soft);text-transform:uppercase}
+  .scroll::after{content:"";display:block;width:1px;height:46px;background:var(--ink-soft);margin:12px auto 0;opacity:.5}
+
+  section{padding:96px 0;border-top:1px solid var(--line)}
+  .sec-head{display:grid;gap:10px;margin-bottom:52px;max-width:620px}
+  .sec-head small{font-size:11.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--accent)}
+  .sec-head h2{font-size:clamp(34px,6vw,58px)}
+  .sec-head p{color:var(--ink-soft)}
+
+  /* Placeholder frame (charcoal look) */
+  .ph{width:100%;height:100%;min-height:200px;display:flex;align-items:center;justify-content:center;text-align:center;padding:14px;font-size:12px;letter-spacing:.06em;color:var(--ink-soft);
+      background:linear-gradient(155deg,color-mix(in srgb,var(--ink) 9%,var(--paper-2)),var(--paper-2));}
+
+  /* Commission cards */
+  .cgrid{display:grid;gap:26px}
+  @media(min-width:640px){.cgrid{grid-template-columns:repeat(2,1fr)}}
+  @media(min-width:980px){.cgrid{grid-template-columns:repeat(3,1fr)}}
+  .ccard{background:var(--paper-2);border:1px solid var(--line);display:flex;flex-direction:column}
+  .ccard .img{aspect-ratio:4/5;overflow:hidden;cursor:zoom-in;background:var(--paper-2)}
+  .ccard .img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s;filter:grayscale(.1)}
+  .ccard:hover .img img{transform:scale(1.04)}
+  .ccard .txt{padding:22px 22px 24px}
+  .stars{color:var(--accent);letter-spacing:4px;font-size:15px}
+  .stars .off{opacity:.25}
+  .quote{font-family:'Cormorant Garamond','Noto Serif Ethiopic',serif;font-size:21px;line-height:1.45;margin:12px 0 16px}
+  :lang(am) .quote{font-size:17px;line-height:1.85;font-family:'Noto Serif Ethiopic',serif}
+  .who{font-size:13px;color:var(--ink-soft);border-top:1px solid var(--line);padding-top:12px;letter-spacing:.04em}
+  .who b{font-weight:500;color:var(--ink)}
+
+  /* Personal works — editorial layout */
+  #personal{background:var(--dark);color:var(--dark-ink);border-top:0}
+  #personal .sec-head p{color:color-mix(in srgb,var(--dark-ink) 65%,transparent)}
+  .pgrid{display:grid;gap:18px;grid-template-columns:repeat(2,1fr);grid-auto-flow:dense}
+  @media(min-width:860px){.pgrid{grid-template-columns:repeat(6,1fr);gap:22px}}
+  .p{position:relative;overflow:hidden;cursor:zoom-in;background:#222}
+  .p img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s}
+  .p:hover img{transform:scale(1.05)}
+  .p .ph{background:linear-gradient(155deg,#2c2b28,#1c1b19);color:#8d8880}
+  .p .cap{position:absolute;left:0;right:0;bottom:0;padding:34px 16px 14px;color:#fff;font-family:'Cormorant Garamond','Noto Serif Ethiopic',serif;font-size:19px;background:linear-gradient(transparent,rgba(0,0,0,.72));opacity:0;transition:.35s}
+  .p:hover .cap{opacity:1}
+  .p.a{grid-column:span 2;aspect-ratio:4/5}
+  .p.b{grid-column:span 2;aspect-ratio:1/1}
+  .p.c{grid-column:span 2;aspect-ratio:3/4}
+  @media(min-width:860px){
+    .p.a{grid-column:span 3;aspect-ratio:1/1.05}
+    .p.b{grid-column:span 3;aspect-ratio:1/1.05}
+    .p.c{grid-column:span 2;aspect-ratio:3/4}
+  }
+
+  /* PDF */
+  .pdf{border:1px solid var(--ink);padding:48px 28px;display:grid;gap:26px;align-items:center;position:relative}
+  @media(min-width:760px){.pdf{grid-template-columns:1fr auto;padding:60px 56px}}
+  .pdf h2{font-size:clamp(32px,5vw,50px);margin:8px 0 10px}
+  .pdf p{color:var(--ink-soft);max-width:540px}
+  .pdf small{font-size:11.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--accent)}
+
+  /* About */
+  .about{display:grid;gap:40px}
+  @media(min-width:820px){.about{grid-template-columns:5fr 6fr;gap:76px;align-items:start}}
+  .portrait{aspect-ratio:4/5;background:var(--paper-2);border:1px solid var(--line);overflow:hidden;position:relative}
+  .portrait::after{content:"";position:absolute;inset:12px;border:1px solid color-mix(in srgb,var(--paper) 70%,transparent);pointer-events:none}
+  .portrait img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(1) contrast(1.06)}
+  .about-text p{font-size:17px;margin-bottom:18px}
+  :lang(am) .about-text p{font-family:'Noto Serif Ethiopic',serif;font-weight:400;line-height:2.05}
+  .sig{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:34px;color:var(--accent)}
+
+  /* Vision */
+  .vgrid{display:grid;gap:0;border-top:1px solid var(--line)}
+  @media(min-width:820px){.vgrid{grid-template-columns:repeat(3,1fr);border-top:0}}
+  .v{padding:34px 0;border-bottom:1px solid var(--line)}
+  @media(min-width:820px){.v{padding:6px 34px 6px 0;border-bottom:0;border-top:1px solid var(--line);padding-top:30px}.v+.v{padding-left:34px;border-left:1px solid var(--line)}}
+  .v .tag{font-size:11.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--accent)}
+  .v h3{font-size:32px;margin:10px 0 10px}
+  .v p{color:var(--ink-soft);font-size:15px}
+
+  /* Contact */
+  .contact{text-align:center}
+  .contact h2{font-size:clamp(38px,8vw,78px);margin-bottom:16px}
+  .contact p{color:var(--ink-soft);max-width:480px;margin:0 auto 34px}
+  footer{padding:30px 0;border-top:1px solid var(--line);text-align:center;font-size:12.5px;color:var(--ink-soft);letter-spacing:.05em}
+
+  .lightbox{position:fixed;inset:0;background:rgba(0,0,0,.94);display:none;align-items:center;justify-content:center;z-index:200;padding:20px;cursor:zoom-out}
+  .lightbox.on{display:flex}
+  .lightbox img{max-width:100%;max-height:100%}
+
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .9s ease,transform .9s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="#top">Hamarich<i>.</i>Arts</a>
+    <nav>
+      <ul>
+        <li><a href="#commissions" data-i18n="nav_commissions"></a></li>
+        <li><a href="#personal" data-i18n="nav_personal"></a></li>
+        <li><a href="#pdf" data-i18n="nav_pdf"></a></li>
+        <li><a href="#about" data-i18n="nav_about"></a></li>
+        <li><a href="#vision" data-i18n="nav_vision"></a></li>
+        <li><a href="#contact" data-i18n="nav_contact"></a></li>
+      </ul>
+    </nav>
+    <div class="lang" role="group" aria-label="Language">
+      <button data-l="am" class="on">አማ</button>
+      <button data-l="en">EN</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <div class="wrap hero">
+    <div class="eyebrow" data-i18n="hero_eyebrow"></div>
+    <h1 data-i18n-html="hero_title"></h1>
+    <p data-i18n="hero_sub"></p>
+    <div class="btns">
+      <a class="btn solid" href="#commissions" data-i18n="btn_see"></a>
+      <a class="btn ghost" href="#contact" data-i18n="btn_order"></a>
+    </div>
+    <div class="scroll" data-i18n="scroll"></div>
+  </div>
+
+  <!-- COMMISSIONS -->
+  <section id="commissions">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <small data-i18n="c_small"></small>
+        <h2 data-i18n="c_title"></h2>
+        <p data-i18n="c_intro"></p>
+      </div>
+      <div class="cgrid" id="cgrid"></div>
+    </div>
+  </section>
+
+  <!-- PERSONAL WORKS -->
+  <section id="personal">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <small data-i18n="p_small"></small>
+        <h2 data-i18n="p_title"></h2>
+        <p data-i18n="p_intro"></p>
+      </div>
+      <div class="pgrid" id="pgrid"></div>
+    </div>
+  </section>
+
+  <!-- PDF -->
+  <section id="pdf">
+    <div class="wrap">
+      <div class="pdf reveal">
+        <div>
+          <small data-i18n="pdf_small"></small>
+          <h2 data-i18n="pdf_title"></h2>
+          <p data-i18n="pdf_text"></p>
+        </div>
+        <a class="btn solid" href="hamarich-portfolio.pdf" download data-i18n="pdf_btn"></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <small data-i18n="a_small"></small>
+        <h2 data-i18n="a_title"></h2>
+      </div>
+      <div class="about reveal">
+        <div class="portrait" id="portrait"><img src="images/me.jpg" alt="Hamarich"></div>
+        <div class="about-text">
+          <p data-i18n="a_p1"></p>
+          <p data-i18n="a_p2"></p>
+          <p data-i18n="a_p3"></p>
+          <div class="sig">Hamarich</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISION -->
+  <section id="vision">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <small data-i18n="v_small"></small>
+        <h2 data-i18n="v_title"></h2>
+        <p data-i18n="v_intro"></p>
+      </div>
+      <div class="vgrid reveal">
+        <div class="v"><div class="tag" data-i18n="v1_tag"></div><h3 data-i18n="v1_h"></h3><p data-i18n="v1_p"></p></div>
+        <div class="v"><div class="tag" data-i18n="v2_tag"></div><h3 data-i18n="v2_h"></h3><p data-i18n="v2_p"></p></div>
+        <div class="v"><div class="tag" data-i18n="v3_tag"></div><h3 data-i18n="v3_h"></h3><p data-i18n="v3_p"></p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="wrap contact reveal">
+      <h2 data-i18n="ct_title"></h2>
+      <p data-i18n="ct_text"></p>
+      <div class="btns">
+        <a class="btn solid" href="https://instagram.com/Hamarich_Arts" target="_blank" rel="noopener">Instagram · @Hamarich_Arts</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>© <span id="y"></span> Hamarich Arts · Addis Ababa, Ethiopia</footer>
+<div class="lightbox" id="lb"><img alt=""></div>
+
+<script>
+/* =====================================================================
+   1) ጽሑፎች / TEXT  — ሁሉም ጽሑፍ እዚህ ነው፤ እዚህ ጋ ቀይር
+   ===================================================================== */
+const T = {
+  am: {
+    nav_commissions:"የኮሚሽን ስራዎች", nav_personal:"የራሴ ስራዎች", nav_pdf:"PDF", nav_about:"ስለ እኔ", nav_vision:"ግቤ", nav_contact:"አግኙኝ",
+    hero_eyebrow:"የከሰል ፖርትሬት · አዲስ አበባ",
+    hero_title:"ፊቶች፣ በከሰል <em>የተሳሉ</em>",
+    hero_sub:"እያንዳንዱ ፊት ታሪክ አለው፤ እኔ በወረቀት ላይ አኖረዋለሁ።",
+    btn_see:"ስራዎችን እይ", btn_order:"ስዕል አሰራ", scroll:"ወደ ታች",
+    c_small:"Commissions", c_title:"የኮሚሽን ስራዎች",
+    c_intro:"ለደንበኞቼ የሰራኋቸው ስዕሎችና ስለ ስራው የተሰማቸው ስሜት።",
+    p_small:"Personal Works", p_title:"የራሴ ፈጠራዎች",
+    p_intro:"ማንም ያላዘዘኝ፣ ከራሴ ውስጥ የፈለቁ ስራዎች።",
+    pdf_small:"Portfolio", pdf_title:"ፖርትፎሊዮውን በ PDF ያግኙ",
+    pdf_text:"ስራዎቼን፣ የደንበኞቼን አስተያየትና ስለ ስራዬ ያለውን መረጃ በአንድ ፋይል አውርደው ያንብቡ።",
+    pdf_btn:"PDF አውርድ ↓",
+    a_small:"About", a_title:"ስለ እኔ",
+    a_p1:"ሰላም፣ እኔ ሃማሪች ነኝ። በአዲስ አበባ የምኖር የከሰል ፖርትሬት ሰዓሊ ነኝ።",
+    a_p2:"ስዕልን የምመለከተው ፊትን ከመኮረጅ በላይ አድርጌ ነው፤ የሰውየውን ስሜት፣ ዓይኑ ውስጥ ያለውን ብርሃንና ጥላ ወደ ወረቀት ማምጣት ነው። ከሰል ይህን ለማድረግ የምወደው መሳሪያዬ ነው፤ በጥቁርና ነጭ መካከል ብዙ ስሜት አለ።",
+    a_p3:"ለስጦታ፣ ለትዝታ ወይም ለራስዎ ስዕል ከፈለጉ አብረን እንስራው።",
+    v_small:"Vision", v_title:"ግቤ",
+    v_intro:"ከከሰል ጀምሬ ወዴት እንደምሄድ።",
+    v1_tag:"አሁን", v1_h:"የከሰል ጥበብ", v1_p:"ፖርትሬትን በከሰል እየሳልኩ ችሎታዬንና የራሴን ስልት ማጥራት።",
+    v2_tag:"ቀጣይ", v2_h:"ቀለምና ቀለም ቅብ", v2_p:"ወደ ቀለም እና paint ስራዎች መስፋት፤ አዲስ ዓለም ወደ ስራዎቼ ማምጣት።",
+    v3_tag:"ግብ", v3_h:"ዓለም አቀፍ ኤግዚቢሽን", v3_p:"ስራዎቼን በዓለም አቀፍ ኤግዚቢሽኖች ማሳየትና የኢትዮጵያን ጥበብ ወደ ዓለም ማድረስ።",
+    ct_title:"ስዕልዎን እንጀምር",
+    ct_text:"ፎቶውን እና የሚፈልጉትን ነገር በ Instagram መልዕክት ይላኩልኝ።",
+    quote_default:"የደንበኛው አስተያየት እዚህ ይገባል።", client_default:"የደንበኛ ስም",
+    ph_work:"ስዕል ጨምር", ph_me:"ፎቶዎን ወደ images/me.jpg ያስገቡ", project:"ስዕል"
+  },
+  en: {
+    nav_commissions:"Commissions", nav_personal:"Personal Works", nav_pdf:"PDF", nav_about:"About", nav_vision:"Vision", nav_contact:"Contact",
+    hero_eyebrow:"Charcoal Portraits · Addis Ababa",
+    hero_title:"Faces, drawn in <em>charcoal</em>",
+    hero_sub:"Every face holds a story. I set it down on paper.",
+    btn_see:"View the work", btn_order:"Commission a portrait", scroll:"Scroll",
+    c_small:"Commissions", c_title:"Commissioned Work",
+    c_intro:"Portraits I made for clients, and what they felt when they received them.",
+    p_small:"Personal Works", p_title:"My Own Creations",
+    p_intro:"Work nobody asked for, drawn purely from within.",
+    pdf_small:"Portfolio", pdf_title:"Get the portfolio as a PDF",
+    pdf_text:"Download my work, client testimonials and details about my practice in a single file.",
+    pdf_btn:"Download PDF ↓",
+    a_small:"About", a_title:"About Me",
+    a_p1:"Hello, I'm Hamarich — a charcoal portrait artist based in Addis Ababa.",
+    a_p2:"I see portraiture as more than copying a face. It's about bringing the person's feeling — the light and shadow in their eyes — onto paper. Charcoal is my favourite way to do it: there is a great deal of emotion between black and white.",
+    a_p3:"If you want a portrait as a gift, a keepsake, or for yourself, let's make it together.",
+    v_small:"Vision", v_title:"Where I'm Going",
+    v_intro:"Starting from charcoal, and where I want it to lead.",
+    v1_tag:"Now", v1_h:"Charcoal mastery", v1_p:"Drawing portraits in charcoal while refining my craft and my own style.",
+    v2_tag:"Next", v2_h:"Colour & paint", v2_p:"Expanding into colour and paint work, bringing a new world into my art.",
+    v3_tag:"Goal", v3_h:"International exhibitions", v3_p:"Showing my work at international exhibitions and carrying Ethiopian art to the world.",
+    ct_title:"Let's begin your portrait",
+    ct_text:"Send me the photo and what you have in mind on Instagram.",
+    quote_default:"The client's feedback goes here.", client_default:"Client name",
+    ph_work:"Add artwork", ph_me:"Place your photo at images/me.jpg", project:"Portrait"
+  }
+};
+
+/* =====================================================================
+   2) የኮሚሽን ስራዎች + የደንበኛ አስተያየት (Testimonials)
+      ፎቶ:  images/commissions/c1.jpg ...
+      rating = ከ 1 እስከ 5 ኮከብ
+      ጽሑፎቹ ባዶ ከሆኑ ናሙና ጽሑፍ ይታያል — በእውነተኛው የደንበኛ አስተያየት ተካው
+   ===================================================================== */
+const commissions = [
+  { img:"images/commissions/c1.jpg", rating:5, name:"", quote:{am:"", en:""} },
+  { img:"images/commissions/c2.jpg", rating:5, name:"", quote:{am:"", en:""} },
+  { img:"images/commissions/c3.jpg", rating:5, name:"", quote:{am:"", en:""} },
+  { img:"images/commissions/c4.jpg", rating:5, name:"", quote:{am:"", en:""} },
+  { img:"images/commissions/c5.jpg", rating:5, name:"", quote:{am:"", en:""} },
+  { img:"images/commissions/c6.jpg", rating:5, name:"", quote:{am:"", en:""} }
+];
+
+/* =====================================================================
+   3) የራሴ ፈጠራዎች  — ፎቶ: images/personal/p1.jpg ...
+      size: a | b | c  (የካርዱ መጠን/ቅርጽ)
+   ===================================================================== */
+const personal = [
+  { img:"images/personal/p1.jpg", size:"a", title:{am:"ርዕስ 1", en:"Title 1"} },
+  { img:"images/personal/p2.jpg", size:"b", title:{am:"ርዕስ 2", en:"Title 2"} },
+  { img:"images/personal/p3.jpg", size:"c", title:{am:"ርዕስ 3", en:"Title 3"} },
+  { img:"images/personal/p4.jpg", size:"c", title:{am:"ርዕስ 4", en:"Title 4"} },
+  { img:"images/personal/p5.jpg", size:"c", title:{am:"ርዕስ 5", en:"Title 5"} }
+];
+
+/* ===================================================================== */
+let lang = "am";
+try { lang = localStorage.getItem("hl") || "am"; } catch(e){}
+const lb = document.getElementById("lb");
+const openLb = src => { lb.querySelector("img").src = src; lb.classList.add("on"); };
+lb.onclick = () => lb.classList.remove("on");
+document.addEventListener("keydown", e => { if (e.key === "Escape") lb.classList.remove("on"); });
+
+function frame(el, src, alt, phText){
+  const img = new Image(); img.src = src; img.alt = alt; img.loading = "lazy";
+  img.onerror = () => { el.innerHTML = '<div class="ph">'+phText+'</div>'; el.style.cursor = "default"; el.onclick = null; };
+  el.onclick = () => openLb(src);
+  el.appendChild(img);
+}
+
+function render(){
+  const t = T[lang];
+  document.documentElement.lang = lang;
+  document.querySelectorAll("[data-i18n]").forEach(n => n.textContent = t[n.dataset.i18n]);
+  document.querySelectorAll("[data-i18n-html]").forEach(n => n.innerHTML = t[n.dataset.i18nHtml]);
+  document.querySelectorAll(".lang button").forEach(b => b.classList.toggle("on", b.dataset.l === lang));
+  document.title = lang === "am" ? "Hamarich Arts — የከሰል ፖርትሬት" : "Hamarich Arts — Charcoal Portraits";
+
+  // commissions
+  const cg = document.getElementById("cgrid"); cg.innerHTML = "";
+  commissions.forEach((c,i) => {
+    const card = document.createElement("article"); card.className = "ccard reveal";
+    const im = document.createElement("div"); im.className = "img";
+    frame(im, c.img, t.project+" "+(i+1), t.ph_work+"<br>"+c.img);
+    const stars = "★".repeat(c.rating) + '<span class="off">' + "★".repeat(5-c.rating) + "</span>";
+    const q = c.quote[lang] || t.quote_default;
+    const who = c.name || t.client_default;
+    const txt = document.createElement("div"); txt.className = "txt";
+    txt.innerHTML = '<div class="stars" aria-label="'+c.rating+'/5">'+stars+'</div><p class="quote">“'+q+'”</p><div class="who"><b>'+who+'</b></div>';
+    card.append(im, txt); cg.appendChild(card);
+  });
+
+  // personal
+  const pg = document.getElementById("pgrid"); pg.innerHTML = "";
+  personal.forEach((p,i) => {
+    const d = document.createElement("div"); d.className = "p "+p.size+" reveal";
+    frame(d, p.img, p.title[lang], t.ph_work+"<br>"+p.img);
+    const cap = document.createElement("div"); cap.className = "cap"; cap.textContent = p.title[lang];
+    d.appendChild(cap); pg.appendChild(d);
+  });
+
+  // portrait fallback
+  const pt = document.getElementById("portrait"), pi = pt.querySelector("img");
+  if (pi) pi.onerror = () => { pt.innerHTML = '<div class="ph" style="height:100%">'+t.ph_me+'</div>'; };
+
+  observe();
+}
+
+document.querySelectorAll(".lang button").forEach(b => b.onclick = () => {
+  lang = b.dataset.l; try { localStorage.setItem("hl", lang); } catch(e){} render();
+});
+
+const io = "IntersectionObserver" in window ? new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } }), {threshold:.12}) : null;
+function observe(){ document.querySelectorAll(".reveal:not(.in)").forEach(n => io ? io.observe(n) : n.classList.add("in")); }
+
+document.getElementById("y").textContent = new Date().getFullYear();
+render();
+</script>
+</body>
+</html>
+
+</body></html>
